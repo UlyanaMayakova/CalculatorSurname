@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="end|center"
+        android:hint="@string/zero"
+        android:textSize="@android:dimen/app_icon_size" />
+
+    <LinearLayout
+        android:id="@+id/all_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/m_letter"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="M"
+                android:textSize="50sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/a1_letter"
+                app:layout_constraintHorizontal_chainStyle="spread">
+            </TextView>
+
+
+                <TextView
+                    android:id="@+id/a1_letter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textSize="50sp"
+                    app:layout_constraintStart_toEndOf="@id/m_letter"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/y_letter">
+                </TextView>
+
+            <TextView
+                android:id="@+id/y_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y"
+                android:textSize="50sp"
+                app:layout_constraintStart_toEndOf="@id/a1_letter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/a2_letter">
+            </TextView>
+
+            <TextView
+                android:id="@+id/a2_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:textSize="50sp"
+                app:layout_constraintStart_toEndOf="@id/y_letter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/k_letter">
+            </TextView>
+
+            <TextView
+                android:id="@+id/k_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="K"
+                android:textSize="50sp"
+                app:layout_constraintStart_toEndOf="@id/a2_letter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/o_letter">
+            </TextView>
+
+            <TextView
+                android:id="@+id/o_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O"
+                android:textSize="50sp"
+                app:layout_constraintStart_toEndOf="@id/k_letter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/v_letter">
+            </TextView>
+
+            <TextView
+                android:id="@+id/v_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="V"
+                android:textSize="50sp"
+                app:layout_constraintStart_toEndOf="@id/o_letter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/a3_letter">
+            </TextView>
+
+            <TextView
+                android:id="@+id/a3_letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:textSize="50sp"
+                app:layout_constraintStart_toEndOf="@id/v_letter"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/delete_signs_percent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/delete"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/plus_minus_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/plus_minus"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/percent_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/percent"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/divide_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/divide"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/seven_eight_nine"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/seven_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/seven"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/eight_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/eight"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/nine_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/nine"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/multiply_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/multiply"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/four_five_six"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/four_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/four"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/five_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/five"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/six_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/six"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/minus_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/minus"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/one_two_three"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/one_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/one"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/two_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/two"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/three_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/three"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/plus_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/plus"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/zero_dot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/zero_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="@string/zero"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/dot_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dot"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+        <Button
+            android:id="@+id/equal_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/equal"
+            android:textSize="@android:dimen/app_icon_size">
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</LinearLayout>
